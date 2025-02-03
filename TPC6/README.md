@@ -1,4 +1,4 @@
-<h1 align="center">TP5</h1>
+<h1 align="center">TPC6</h1>
 
 ## Autor
 - Pedro Silva

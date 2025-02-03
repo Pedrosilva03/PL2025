@@ -7,7 +7,7 @@ numTpcs = 8
 for i in range(numTpcs):
     os.makedirs(f'TPC{i + 1}', exist_ok=True)
 
-    readmeContent = f"""<h1 align="center">TP{i}</h1>
+    readmeContent = f"""<h1 align="center">TPC{i + 1}</h1>
 
 ## Autor
 - Pedro Silva
