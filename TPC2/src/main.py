@@ -19,6 +19,12 @@ def splittedLinesProcess(splittedLines):
 
     return processedLines
 
+def removeDesc(splittedLine):
+    while len(splittedLine) > 6:
+        del splittedLine[1]
+
+    return splittedLine
+
 def reader():
     lista_obras = []
 
@@ -26,8 +32,8 @@ def reader():
 
     linhas = splittedLinesProcess(dataset.readlines())
     for linha in linhas:
-        obra_data = linha.split(";") # Dar fix a isto (elemento extra)
-        obra = Obra(*obra_data)
+        obra_data = linha.split(";")
+        obra = Obra(*removeDesc(obra_data))
         lista_obras.append(obra)
         
     return lista_obras

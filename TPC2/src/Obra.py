@@ -1,7 +1,6 @@
 class Obra:
-    def __init__(self, nome, descricao, anoCriacao, periodo, compositor, duracao, id):
+    def __init__(self, nome, anoCriacao, periodo, compositor, duracao, id):
         self.nome = nome
-        self.descricao = descricao
         self.anoCriacao = anoCriacao
         self.periodo = periodo
         self.compositor = compositor
@@ -10,9 +9,6 @@ class Obra:
 
     def getNome(self):
         return self.nome
-
-    def getDescricao(self):
-        return self.descricao
 
     def getAnoCriacao(self):
         return self.anoCriacao
