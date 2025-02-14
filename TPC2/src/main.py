@@ -1,8 +1,9 @@
 from Obra import Obra
+import stats
 
 filepath = 'data/obras.csv'
 
-# Função que une os dados que estavam separados por \n na descrição para que possam ser processados linha a linha
+# Function that removes the line separators in the middle of the description and generates proper lines to be processed
 def splittedLinesProcess(splittedLines):
     processedLines = []
 
@@ -19,6 +20,7 @@ def splittedLinesProcess(splittedLines):
 
     return processedLines
 
+# Function that removes the description and handles cases where it could be splitted by accident
 def removeDesc(splittedLine):
     while len(splittedLine) > 6:
         del splittedLine[1]
@@ -38,11 +40,21 @@ def reader():
         
     return lista_obras
 
-def writer():
-    pass
+def writer(sortedComposers, periodCount, musicPerPeriod):
+    print(f'Compositores: {sortedComposers}')
+    print("\n")
+    print(f'Obras por período: {periodCount}')
+    print("\n")
+    print(f'Músicas por período: {musicPerPeriod}')
 
 def main():
     lista_obras = reader()
+
+    sortedComposers = stats.sortComposers(lista_obras)
+    periodCount = stats.countMusicByPeriod(lista_obras)
+    musicPerPeriod = stats.musicByPeriod(lista_obras)
+
+    writer(sortedComposers, periodCount, musicPerPeriod)
 
 if __name__ == "__main__":
     main()
