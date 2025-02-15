@@ -41,11 +41,20 @@ def reader():
     return lista_obras
 
 def writer(sortedComposers, periodCount, musicPerPeriod):
-    print(f'Compositores: {sortedComposers}')
+    print(f'Compositores:')
+    for composer in sortedComposers:
+        print(composer)
     print("\n")
-    print(f'Obras por período: {periodCount}')
+
+    print(f'Obras por período:')
+    for period, count in periodCount.items():
+        print(f'{period}: {count}')
     print("\n")
-    print(f'Músicas por período: {musicPerPeriod}')
+
+    print(f'Músicas por período:')
+    for period, obras in musicPerPeriod.items():
+        print(f'{period}: {obras}')
+        print("---------------------")
 
 def main():
     lista_obras = reader()
