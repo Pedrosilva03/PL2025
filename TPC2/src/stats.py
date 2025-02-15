@@ -1,7 +1,13 @@
 from Obra import Obra
 
 def sortComposers(lista_obras):
-    return sorted([obra.getCompositor() for obra in lista_obras])
+    compositores = []
+    for obra in lista_obras:
+        compositor = obra.getCompositor()
+        if compositor not in compositores:
+            compositores.append(compositor)
+
+    return sorted(compositores)
 
 def countMusicByPeriod(lista_obras):
     musicByPeriod = {}
