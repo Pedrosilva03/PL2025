@@ -19,7 +19,7 @@ Estes comandos são também mostrados e explicados ao iniciar a máquina.
 ## Funcionamento
 
 O programa deve ser executado com o comando ```python main.py <caminho para o ficheiro de stock>```
-- O programa carrega o stock da máquina de um ficheiro ```.json``` parecido com [este](https://github.com/Pedrosilva03/PL2024/tree/main/TP5/data), que deve ser passado como argumento
+- O programa carrega o stock da máquina de um ficheiro ```.json``` parecido com [este](https://github.com/Pedrosilva03/PL2025/blob/main/TPC5/stock/stock.json), que deve ser passado como argumento
 - Apresenta um menu inicial com instruções para a utilização da máquina
 - Processa comandos introduzidos pelo utilizador de acordo com as instruções apresentadas
 - Após o pedido de saída, atualiza o ficheiro de stock com o novo estado da máquina e coloca-o novamente no local inicialmente passado como argumento
